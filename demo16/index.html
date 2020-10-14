@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // let  obj = {
+    //     name: 'vsa',
+    //     age: '25'
+    // };
+    // let  obj2 = {
+    //     name: 'vsa',
+    //     age: '25'
+    //     status: false
+    // };
+
+    class User {
+
+        constructor(name, age) {
+            this._name = name;
+            this._age = age;
+        }
+
+        greeting(){
+            return 'hi I am '+  this.name
+        }
+
+
+        get name() {
+            let password = prompt('enter password');
+            if (password == '111111'){
+                return this._name;
+            }
+            return null;
+        }
+
+        set name(value) {
+            this._name = value;
+        }
+
+        get age() {
+            return this._age;
+        }
+
+        set age(value) {
+            if(value>0)
+            this._age = value;
+        }
+
+//
+        // constructor(Name, age) {
+        //     console.log('object is created');
+        //     this.name = Name;
+        //     this.age = age;
+        // }
+    }
+let user1 = new User('vas',25);
+console.log(user1)
+console.log(user1.greeting());
+
+user1.name = '.kgfjghjk';
+    console.log(user1.name);
+user1.age = 100
+    console.log(user1);
+</script>
+
+</body>
+</html>

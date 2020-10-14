@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="company">HelloW</h1>
+<p class="target" >fghjkujhgfgtyhujikoikmjnhgyuj.gtfrgtyhujiuk
+    jhygtrftgyhuj.
+    uuytrtyu. ytrftghyjuuyhtgrfrrtgyhuj.ujhygtfrgtyhujjyhgt!
+</p>
+<ul>
+    <li class="list">data 1</li>
+    <li class="list">data 2</li>
+    <li class="list">data 3</li>
+</ul>
+<form id="main1">
+    <input class="list" type="text" name="input1" placeholder="fild 1">
+    <input type="text" name="input1" placeholder="fild 2">
+    <input type="text" name="input1" placeholder="fild 3">
+    </form>
+<input type="submit" id="send" value="push me 1">
+<input type="submit" id="send" value="push me 2">
+
+<script>
+
+    //  // console.log(document.body.children[2].children)
+    // // console.log(document.body.childNodes);
+    //  let lis = document.getElementsByTagName('list');
+    //  console.log(lis);
+    //  let index = 0;
+    //  for (const li of lis) {
+    //      li.setAttribute('id' , 'newId ' +index);
+    //      index++;
+    //
+    //      li.style.background = 'rgb(${Math.random()*255},'
+    //          '${Math.random()*255}, ${Math.random()*255})';
+    //      li.innerText = 'new data' + index;
+    //  }
+
+    //let sendInput = document.getElementById("send");
+    // sendInput.style.background ='red';
+    //
+    // let company = document.getElementsByClassName('company')[0];
+    // company.classList.add('newClass');
+    // company.classList.remove('newClass');
+    // console.log(company.classList.contains('company'));
+    // console.log(company.classList);
+    //
+    // company.classList.toggle('xxx');
+
+    let lists = document.querySelectorAll("li");
+    console.log(lists.parentElement);
+
+    let divElement = document.createElement('div');
+    divElement.innerHTML = '<em>hello</em>';
+    divElement.style.background = 'silver'
+   document.body.appendChild(divElement);
+   document.body.appendChild(divElement.cloneNode(true));
+   document.body.appendChild(divElement.cloneNode(true));
+   // document.body.appendChild(divElement);
+   //  document.body.insertBefore(divElement, document.getElementById('send'));
+let button = document.getElementById('send');
+    console.log(button.parentElement);
+
+
+//??????????
+    consol.log(button.getAttribute('id'))
+
+</script>
+</body>
+</html>

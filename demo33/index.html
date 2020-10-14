@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fetch</title>
+</head>
+<body>
+<script>
+let promise = fetch("http://localhost:3000/HELLO" , {
+    method: 'POST'
+});
+promise.then(value => {
+    console.log(value);
+   return value.blob();
+}).then(value => {
+    console.log(value);
+} )
+
+</script>
+
+</body>
+</html>

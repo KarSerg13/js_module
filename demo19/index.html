@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+        this.greeting = function () {
+            return 'hello  I am ' + this.name
+        }
+    }
+    // let user = new User('jhg', 15)
+    // console.log(user);
+    // console.log(user.greeting());
+    //
+    // let obj = {
+    //     name: 'pet'
+    // }
+    // console.log(user.greeting.call(obj));
+
+    function Student (name, age, group) {
+        User.apply(this,arguments);
+        this.group = group;
+    }
+    let student = new Student('kokos', 25, 'kjdfg');
+    console.log(student);
+
+</script>
+
+</body>
+</html>

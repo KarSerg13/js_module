@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//     function outer(callback){
+//         callback();
+//     }
+// outer(function () {
+//     console.log('do some');
+//
+// })
+
+// calculate(10, 20, function (a, b) {
+//     console.log(a+b*2);
+// });
+//
+// calculate(20,40, function (a, b) {
+//     console.log(a*b/a);
+// })
+
+function  calculate(a, b, callback) {
+    let result = callback(a, b);
+    return result;
+}
+let res = calculate(10, 20, function (a, b) {
+    return 10+20;
+});
+console.log(res);
+
+
+</script>
+
+</body>
+</html>

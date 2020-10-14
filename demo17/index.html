@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Human {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        greeting() {
+            return 'hi I am ' + this.name
+        }
+    }
+class Student extends Human{
+
+  // constructor(name, age, group) {
+  //     this.name = name;
+  //     this.age = age;
+  //     this.group = group;
+  // }
+  //   greeting() {
+  //       return 'hi I am ' + this.name;
+  //   }
+
+    constructor(name, age, group) {
+        super(name, age);
+        this.group = group;
+    }
+
+    // greeting() {
+    //     return /*super.greeting()*/ 'hgcvhbj';
+    // }
+}
+let student = new Student('vas', 25, 'dfcgvb');
+    console.log(student.greeting());
+
+    class  Policeman extends Student{
+
+    }
+    class  Stuntman extends  Student{
+
+    }
+
+    let XXX = class extends Human {
+        constructor(a, b ) {
+            super(a, b);
+            this.a = a;
+            this.b = b;
+
+        }
+    }
+    let xxx = new XXX(10,20);
+ console.log(xxx);
+
+</script>
+
+</body>
+</html>

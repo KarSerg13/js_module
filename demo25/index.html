@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    #point{
+        height: 200px;
+        width: 200px;
+        background: #00B7FF;
+    }
+
+    </style>
+
+</head>
+<body>
+<!--<button id="target" onclick="(function () {-->
+<!--    console.log('sdsdsd');-->
+<!--}())">push me </button>-->
+
+<!--<button id="target"> push me </button>-->
+<div id="point"></div>
+<input type=""  id="inp" placeholder="">
+
+<p id="resolve" > </p>
+
+<script>
+
+let btn = document.getElementById('target');
+
+ // btn.onclick = function (){
+ // btn.onmouseover = function (){
+ // btn.onmouseleave = function (ev){
+ //     console.log('click', ev);
+ // }
+// let point = document.getElementById('point');
+//
+// point.onmousemove = function (e) {
+//     console.log(e.clientX, e.clientY);
+//
+//     this.style.background = `rgb(${e.clientX}, ${e.clientY}, ${e.clientY})`
+// }
+let input = document.getElementById('inp');
+
+let resolve = document.getElementById('resolve');
+input.oninput = function (e) {
+    e.preventDefault();
+
+    // console.log();
+    // console.log(this.value);
+    resolve.innerText = this.value;
+
+}
+</script>
+</body>
+</html>

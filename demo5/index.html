@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj = {
+        name: 'Serg',
+        age: 37,
+        exp: (0.5 +'  month'),
+        wife: {
+            name: 'Ann',
+            age: 30,
+            exp: 5
+        }
+    }
+console.log(obj.wife.exp);
+    let key = 'name';
+console.log(obj['wife'] [key]);
+
+obj['newProperty'] = 'new prop';
+console.log(obj);
+
+delete obj.newProperty;
+console.log(obj);
+
+</script>
+</body>
+</html>

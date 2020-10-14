@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+// 1. Cоздаём
+let xhr = new XMLHttpRequest();
+
+// 2. Конфигурируем
+xhr.open('GET', 'http://localhost:3000/users', true);
+
+// 3. Отправляем
+xhr.send();
+
+xhr.onload = function () {
+    console.log(xhr.status);
+    console.log(xhr.statusText);
+    let response = xhr.response;
+    console.log(response);
+    let usersList = JSON.parse(response);
+
+
+
+    for (const user of usersList){
+        let p = document.createElement('p');
+        p.innerText = user.id + '' +user.name;
+        document.body.appendChild(p);
+
+
+    }
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

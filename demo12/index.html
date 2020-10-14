@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let user = {
+    name: 'vas',
+    greeting: function () {
+      //  console.log ('hi I am - $ {this.name }')
+        console.log('hi i am' , this.name );
+        console.log('hi i am ' + this.name);
+    }
+}
+// user.greeting();
+
+let userJSON =JSON.stringify(user);
+console.log(user);
+console.log(/*typeof*/ userJSON);     // ??????  JSON  ?????
+
+let parse = JSON.parse(userJSON);
+console.log(parse);
+</script>
+</body>
+</html>

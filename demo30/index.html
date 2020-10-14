@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise</title>
+</head>
+<body>
+<script>
+    // let a = 0;
+    // setTimeout(function () {
+    //     a = 100;
+    //     console.log(a);
+    // },1000);
+    // console.log(a);
+
+    let cleanRoom = new Promise((resolve, reject) =>{
+
+        setTimeout(function () {
+            let isStart = true;
+            if (isStart){
+                resolve('room is clean')
+            }else {
+                reject('room is dirty');
+            }
+        },1500)
+    });
+ function removeGarbage(){
+     return new Promise((resolve) => {
+         resolve('garb is removed')
+     });
+ }
+    cleanRoom.then(value => {
+        console.log(value);
+        return removeGarbage();
+    }).then(value => {
+            console.log(value);
+
+            return new Promise(resolve => {
+                setTimeout(function () {
+                    resolve('i get my rewadr');
+                },2000)
+            });
+
+    }).then(value => console.log(value))
+        .catch(reason => {
+        console.log(reason);
+    })
+</script>
+
+</body>
+</html>
